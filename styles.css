@@ -34,12 +34,12 @@ body{
 
 .faq{
     width: 420px;
-    height: 470px;
+    height: auto;
     display: flex;
     flex-direction: column;
     gap: 20px;
     background-color: white;
-    padding: 25px;
+    padding: 25px 25px 0 25px;
     border-radius: 15px;
 }
 
@@ -68,6 +68,7 @@ header img{
 
 .faq-item:last-child{
     border-bottom: none;
+    padding-bottom: none;
 }
 
 
