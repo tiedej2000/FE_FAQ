@@ -28,7 +28,7 @@ body{
     place-items: center;
     background-color: var(--light-pink);
     background-image: url(./assets/images/background-pattern-desktop.svg);
-    background-repeat: no-repeat;
+    background-repeat: repeat-x;
 
 }
 
@@ -111,4 +111,22 @@ header img{
     width: 100%;
     height: auto;
     object-fit: cover;
+}
+
+
+@media(max-width:600px){
+    *{
+        box-sizing: border-box;
+    }
+
+    body{
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .faq{
+        width: 90%;
+        height: auto;
+        margin: auto;
+    }
 }
