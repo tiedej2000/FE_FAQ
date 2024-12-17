@@ -1,0 +1,114 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    line-height: 1;
+    padding: 0;
+}
+
+html{
+    /* font */
+    font-family: "Work Sans", sans-serif;
+    --font-weight-light: 400;
+    --font-weight-regular: 600;
+    --font-weight-bold: 700;
+    --font-size-heading: 2rem;
+    --font-size-summary: 0.8rem;
+    --font-size-summary-description: 0.7rem;
+
+    /* colors */
+    --light-pink: hsl(275, 100%, 97%);
+    --gray-purple:hsl(292, 16%, 49%);
+    --dark-purple: hsl(292, 42%, 14%);
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: var(--light-pink);
+    background-image: url(./assets/images/background-pattern-desktop.svg);
+    background-repeat: no-repeat;
+
+}
+
+.faq{
+    width: 420px;
+    height: 470px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header h1{
+    font-size: var(--font-size-heading);
+    color: var(--dark-purple);
+}
+
+header img{
+    transform: scale(0.6);
+}
+
+.faq-item{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--gray-purple);
+}
+
+.faq-item:last-child{
+    border-bottom: none;
+}
+
+
+.faq-summary{
+    display: flex;
+    align-items: center;
+    font-size: var(--font-size-summary);
+    font-weight: var(--font-weight-regular);
+    justify-content: space-between;
+    color: var(--dark-purple);
+    cursor: pointer;
+}
+
+.faq-summary:hover{
+    color: #B13EE2;
+}
+
+.faq-description{
+    font-size: var(--font-size-summary-description);
+    font-weight: var(--font-weight-light);
+    line-height: 1.6;
+    color: var(--gray-purple);
+    max-height: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.faq-description.active{
+    display: block;
+    max-height: 500px;
+    opacity: 1;
+}
+
+.arrow-container{
+    height: 20px;
+    width: 20px;
+}
+
+.arrow-container img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
